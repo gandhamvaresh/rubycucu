@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="3" name="" skipped="0" tests="3" time="0.136340">
+<testcase classname="" name="Testing the capture of STDOUT" time="0.072419">
+  <failure message="failed Testing the capture of STDOUT" type="failed">
+    <![CDATA[Scenario: Testing the capture of STDOUT
+
+When I run the rake task 'cucumber_rake_runner:stdout_test'
+Then the contents of STDOUT should contain 'String expected to be sent to STDOUT'
+
+Message:
+]]>
+    <![CDATA[undefined method `run_rake_task' for #<Object:0x00000001cddc40> (NoMethodError)
+features/rake_runner.feature:7:in `When I run the rake task 'cucumber_rake_runner:stdout_test'']]>
+  </failure>
+  <system-out/>
+  <system-err/>
+</testcase>
+<testcase classname="" name="Testing the capture of timing with default duration of 1 second" time="0.029362">
+  <failure message="failed Testing the capture of timing with default duration of 1 second" type="failed">
+    <![CDATA[Scenario: Testing the capture of timing with default duration of 1 second
+
+When I run the rake task 'cucumber_rake_runner:time_test'
+Then the task should have taken '1' seconds
+
+Message:
+]]>
+    <![CDATA[undefined method `run_rake_task' for #<Object:0x00000002562690> (NoMethodError)
+features/rake_runner.feature:11:in `When I run the rake task 'cucumber_rake_runner:time_test'']]>
+  </failure>
+  <system-out/>
+  <system-err/>
+</testcase>
+<testcase classname="" name="Testing the capture of timing with non default duration (2 seconds)" time="0.034559">
+  <failure message="failed Testing the capture of timing with non default duration (2 seconds)" type="failed">
+    <![CDATA[Scenario: Testing the capture of timing with non default duration (2 seconds)
+
+When I run the rake task 'cucumber_rake_runner:time_test' with '2' as parameters
+Then the task should have taken '2' seconds
+
+Message:
+]]>
+    <![CDATA[undefined method `run_rake_task' for #<Object:0x00000001d41420> (NoMethodError)
+features/rake_runner.feature:15:in `When I run the rake task 'cucumber_rake_runner:time_test' with '2' as parameters']]>
+  </failure>
+  <system-out/>
+  <system-err/>
+</testcase>
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testsuite>
